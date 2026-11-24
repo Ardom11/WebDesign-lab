@@ -212,7 +212,7 @@
                   >Full name *</label
                 >
                 <input
-                  class="box-border min-h-11 w-full rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint"
+                  class="box-border min-h-11 w-full rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
                   type="text"
                   id="full-name"
                   name="full_name"
@@ -220,6 +220,7 @@
                   autocomplete="name"
                   required
                 />
+                <p id="full-nameError" class="invisible text-error-fg">Please provide your name</p>
               </div>
 
               <div class="flex min-w-0 flex-col gap-2">
@@ -229,7 +230,7 @@
                   >Email address *</label
                 >
                 <input
-                  class="box-border min-h-11 w-full rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint"
+                  class="box-border min-h-11 w-full rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
                   type="email"
                   id="email"
                   name="email"
@@ -237,6 +238,7 @@
                   autocomplete="email"
                   required
                 />
+                <p id="emailError" class="invisible text-error-fg">Please provide a valid email</p>
               </div>
 
               <div class="flex min-w-0 flex-col gap-2">
@@ -246,7 +248,7 @@
                   >Organisation / club (optional)</label
                 >
                 <input
-                  class="box-border min-h-11 w-full rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint"
+                  class="box-border min-h-11 w-full rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
                   type="text"
                   id="organisation"
                   name="organisation"
@@ -262,7 +264,7 @@
                   >Inquiry type *</label
                 >
                 <select
-                  class="box-border min-h-11 w-full cursor-pointer appearance-none rounded-xs border bg-surface-light bg-chevron bg-[position:right_16px_center] bg-no-repeat py-3 pe-10 ps-3.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint invalid:text-content-disabled [&>option]:text-content-main"
+                  class="box-border min-h-11 w-full cursor-pointer appearance-none rounded-xs border bg-surface-light bg-chevron bg-[position:right_16px_center] bg-no-repeat py-3 pe-10 ps-3.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&>option]:text-content-main [&:user-invalid]:border-error-fg"
                   id="inquiry-type"
                   name="inquiry_type"
                   aria-describedby="topics-hint"
@@ -277,6 +279,7 @@
                     Partnership / collaboration
                   </option>
                 </select>
+                <p id="inquiry-typeError" class="invisible text-error-fg">Please select inquiry type</p>
               </div>
 
               <p
@@ -294,13 +297,14 @@
                   >Subject *</label
                 >
                 <input
-                  class="box-border min-h-11 w-full rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint"
+                  class="box-border min-h-11 w-full rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
                   type="text"
                   id="subject"
                   name="subject"
                   placeholder="A short summary"
                   required
                 />
+                <p id="subjectError" class="invisible text-error-fg">Please enter a subject of an email</p>
               </div>
 
               <div class="col-span-full flex min-w-0 flex-col gap-2">
@@ -310,18 +314,19 @@
                   >Message *</label
                 >
                 <textarea
-                  class="box-border min-h-32 w-full resize-y rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint"
+                  class="box-border min-h-32 w-full resize-y rounded-xs border bg-surface-light px-3.5 py-3 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
                   id="message"
                   name="message"
                   rows="4"
                   placeholder="Tell us how we can help…"
                   required
                 ></textarea>
+                <p id="messageError" class="invisible text-error-fg">Please enter a message for us</p>
               </div>
 
               <div class="col-span-full flex items-start gap-3">
                 <input
-                  class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer appearance-none rounded-xs border border-primary-navy bg-surface-light bg-center bg-no-repeat transition-colors duration-fast ease-standard checked:bg-primary-navy checked:bg-check focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-accent-brass"
+                  class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer appearance-none rounded-xs border border-primary-navy bg-surface-light bg-center bg-no-repeat transition-colors duration-fast ease-standard checked:bg-primary-navy checked:bg-check focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-accent-brass [&:user-invalid]:border-error-fg"
                   type="checkbox"
                   id="consent"
                   name="consent"
@@ -460,5 +465,6 @@
         });
       })();
     </script>
+    <script src="assets/js/validation.js"></script>
   </body>
 </html>
