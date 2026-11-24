@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Participate — STRATA</title>
+    <meta
+      name="description"
+      content="Join STRATA as an owner, builder or club. Tell us about your vehicle and apply to become part of a future gathering."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ===================== Header ===================== -->
+    <header class="header" id="site-header">
+      <nav class="header-left" id="nav-primary" aria-label="Primary navigation">
+        <a href="index.html#section-events">Events</a>
+        <a href="participate.html">Participate</a>
+      </nav>
+
+      <a class="logo" href="index.html" aria-label="STRATA home">
+        <img src="assets/icons/logo.svg" alt="STRATA" loading="lazy" />
+      </a>
+
+      <nav class="header-right" id="nav-secondary" aria-label="Secondary navigation">
+        <a href="archive.html">Archive</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile only -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-primary nav-secondary"
+        aria-label="Menu"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 6h18M3 12h18M3 18h18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <!-- ===================== Hero ===================== -->
+      <section
+        class="border-b border-line bg-canvas-warm py-[calc(var(--section-padding-y)*0.67)]"
+        aria-labelledby="hero-title"
+      >
+        <div class="container flex flex-col gap-5">
+          <p class="breadcrumb">Participate / Bring your story</p>
+          <h1
+            id="hero-title"
+            class="font-display text-4xl font-light leading-headline text-content-main sm:text-5xl lg:text-6xl"
+          >
+            Your build.<br />
+            Our shared ground.
+          </h1>
+          <p
+            class="max-w-[480px] text-base leading-body text-content-secondary"
+          >
+            Join STRATA as an owner, builder or club. Tell us about your vehicle
+            and apply to become part of a future gathering.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== 01 / Application form ===================== -->
+      <section class="py-section" aria-labelledby="form-title">
+        <div class="container">
+          <header class="mb-8 flex flex-col gap-3 sm:mb-10">
+            <p class="eyebrow">01 / Application form</p>
+            <h2
+              id="form-title"
+              class="font-sans text-2xl font-normal leading-[1.2] text-content-main sm:text-3xl"
+            >
+              Let’s get to know your build.
+            </h2>
+            <p
+              class="max-w-narrow text-base leading-body text-content-secondary"
+            >
+              One application for your vehicle and chosen event. Have your
+              details and recent vehicle photos ready.
+            </p>
+          </header>
+
+          <div
+            class="grid grid-cols-1 items-start gap-[calc(var(--grid-gap)+16px)] lg:grid-cols-[minmax(240px,280px)_minmax(0,1fr)]"
+          >
+            <aside
+              class="rounded-xs border border-line bg-surface-light p-6"
+              aria-labelledby="steps-title"
+            >
+              <h3
+                id="steps-title"
+                class="mb-5 font-sans text-xl font-normal leading-[1.3]"
+              >
+                How it works
+              </h3>
+              <ol class="m-0 flex flex-col gap-5 p-0">
+                <li>
+                  <h4 class="mb-1 text-sm font-medium leading-ui">
+                    01 / Share your build
+                  </h4>
+                  <p class="text-[13px] leading-normal text-content-secondary">
+                    Complete your details, tell your story and upload recent
+                    photos.
+                  </p>
+                </li>
+                <li>
+                  <h4 class="mb-1 text-sm font-medium leading-ui">
+                    02 / Choose your event
+                  </h4>
+                  <p class="text-[13px] leading-normal text-content-secondary">
+                    Select a gathering and how you’d like to take part.
+                  </p>
+                </li>
+                <li>
+                  <h4 class="mb-1 text-sm font-medium leading-ui">
+                    03 / Team review
+                  </h4>
+                  <p class="text-[13px] leading-normal text-content-secondary">
+                    We review the application and share the next steps by email.
+                  </p>
+                </li>
+              </ol>
+            </aside>
+
+            <form
+              class="flex min-w-0 flex-col gap-8"
+              action="#"
+              method="post"
+              enctype="multipart/form-data"
+            >
+              <p class="text-xs leading-ui text-content-secondary">
+                All fields marked * are required.
+              </p>
+
+              <!-- Your details -->
+              <fieldset class="min-w-0">
+                <legend
+                  class="float-left mb-5 w-full p-0 font-sans text-xl font-normal leading-[1.3] text-content-main"
+                >
+                  Your details
+                </legend>
+                <div
+                  class="clear-both grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2"
+                >
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="full-name"
+                      >Full name *</label
+                    >
+                    <input
+                      class="box-border min-h-10 w-full rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      type="text"
+                      id="full-name"
+                      name="full_name"
+                      placeholder="Your name"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="email"
+                      >Email address *</label
+                    >
+                    <input
+                      class="box-border min-h-10 w-full rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="phone"
+                      >Phone number *</label
+                    >
+                    <input
+                      class="box-border min-h-10 w-full rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Country code + number"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="city"
+                      >City / country *</label
+                    >
+                    <input
+                      class="box-border min-h-10 w-full rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      type="text"
+                      id="city"
+                      name="city"
+                      placeholder="Where are you based?"
+                      autocomplete="address-level2"
+                      required
+                    />
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Your vehicle -->
+              <fieldset class="min-w-0 border-t pt-8">
+                <legend
+                  class="float-left mb-5 w-full p-0 font-sans text-xl font-normal leading-[1.3] text-content-main"
+                >
+                  Your vehicle
+                </legend>
+                <div
+                  class="clear-both grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2"
+                >
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="make-model"
+                      >Make &amp; model *</label
+                    >
+                    <input
+                      class="box-border min-h-10 w-full rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      type="text"
+                      id="make-model"
+                      name="make_model"
+                      placeholder="e.g. manufacturer / model"
+                      required
+                    />
+                  </div>
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="year"
+                      >Year *</label
+                    >
+                    <input
+                      class="box-border min-h-10 w-full rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      type="text"
+                      id="year"
+                      name="year"
+                      placeholder="YYYY"
+                      inputmode="numeric"
+                      pattern="[0-9]{4}"
+                      maxlength="4"
+                      required
+                    />
+                  </div>
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="category"
+                      >Build category *</label
+                    >
+                    <select
+                      class="box-border min-h-10 w-full cursor-pointer appearance-none rounded-xs border border-line bg-surface-light bg-chevron bg-[position:right_14px_center] bg-no-repeat px-3.5 py-2.5 pr-9 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:has(option[value='']:checked)]:text-content-disabled [&:user-invalid]:border-error-fg"
+                      id="category"
+                      name="category"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Select a category
+                      </option>
+                      <option value="stock">Stock / original</option>
+                      <option value="restored">Restored</option>
+                      <option value="modified">Modified</option>
+                      <option value="custom">Custom build</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="club"
+                      >Club / social profile (optional)</label
+                    >
+                    <input
+                      class="box-border min-h-10 w-full rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      type="text"
+                      id="club"
+                      name="club"
+                      placeholder="Club name or profile URL"
+                    />
+                  </div>
+                  <div class="col-span-full flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="story"
+                      >Tell us about your build *</label
+                    >
+                    <textarea
+                      class="box-border min-h-24 w-full resize-y rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      id="story"
+                      name="story"
+                      rows="4"
+                      placeholder="Story, modifications and details that make it yours."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-span-full flex min-w-0 flex-col gap-1.5">
+                    <span
+                      class="text-xs font-medium leading-ui text-content-main"
+                      id="photos-label"
+                      >Vehicle photos *</span
+                    >
+                    <label
+                      class="relative flex cursor-pointer flex-col items-center gap-3 rounded-xs border border-dashed border-accent-brass bg-surface-light p-6 text-center transition-colors duration-base ease-standard hover:border-accent-brass-hover hover:bg-accent-brass-tint focus-within:outline focus-within:outline-2 focus-within:outline-offset-[3px] focus-within:outline-primary-navy"
+                      for="photos"
+                    >
+                      <input
+                        class="sr-only"
+                        type="file"
+                        id="photos"
+                        name="photos"
+                        accept="image/jpeg,image/png"
+                        multiple
+                        required
+                        aria-describedby="photos-hint"
+                      />
+                      <span class="text-sm font-medium text-primary-navy"
+                        >+ Add vehicle photos</span
+                      >
+                      <span
+                        class="self-start text-left text-xs leading-normal text-content-secondary"
+                        id="photos-hint"
+                      >
+                        Front, side and detail views.<br />
+                        JPG / PNG · Up to 5 images, 10 MB each.
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Your participation -->
+              <fieldset class="min-w-0 border-t pt-8">
+                <legend
+                  class="float-left mb-5 w-full p-0 font-sans text-xl font-normal leading-[1.3] text-content-main"
+                >
+                  Your participation
+                </legend>
+                <div
+                  class="clear-both grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2"
+                >
+                  <div class="col-span-full flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="event"
+                      >Event *</label
+                    >
+                    <select
+                      class="box-border min-h-10 w-full cursor-pointer appearance-none rounded-xs border border-line bg-surface-light bg-chevron bg-[position:right_14px_center] bg-no-repeat px-3.5 py-2.5 pr-9 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:has(option[value='']:checked)]:text-content-disabled [&:user-invalid]:border-error-fg"
+                      id="event"
+                      name="event"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Select an upcoming event
+                      </option>
+                      <option value="spring-assembly">Spring assembly</option>
+                      <option value="summer-sessions">Summer sessions</option>
+                    </select>
+                  </div>
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="participation-type"
+                      >Participation type *</label
+                    >
+                    <select
+                      class="box-border min-h-10 w-full cursor-pointer appearance-none rounded-xs border border-line bg-surface-light bg-chevron bg-[position:right_14px_center] bg-no-repeat px-3.5 py-2.5 pr-9 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:has(option[value='']:checked)]:text-content-disabled [&:user-invalid]:border-error-fg"
+                      id="participation-type"
+                      name="participation_type"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Select a category
+                      </option>
+                      <option value="display">Display vehicle</option>
+                      <option value="club">Club stand</option>
+                    </select>
+                  </div>
+                  <div class="flex min-w-0 flex-col gap-1.5">
+                    <label
+                      class="text-xs font-medium leading-ui text-content-main"
+                      for="notes"
+                      >Additional notes (optional)</label
+                    >
+                    <input
+                      class="box-border min-h-10 w-full rounded-xs border border-line bg-surface-light px-3.5 py-2.5 font-sans text-sm leading-ui text-content-main transition-[border-color,box-shadow] duration-fast ease-standard placeholder:text-content-disabled hover:border-content-disabled focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint [&:user-invalid]:border-error-fg"
+                      type="text"
+                      id="notes"
+                      name="notes"
+                      placeholder="Access or other requests"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+
+              <label class="flex cursor-pointer items-start gap-2.5">
+                <input
+                  class="mt-0.5 h-4 w-4 flex-none cursor-pointer accent-primary-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
+                  type="checkbox"
+                  name="consent"
+                  required
+                />
+                <span class="text-[13px] leading-normal text-content-secondary">
+                  I agree to the event participation rules and consent to STRATA
+                  using these details to review and respond to my application. *
+                </span>
+              </label>
+
+              <div class="flex flex-col items-start gap-4">
+                <button
+                  class="button button-primary w-full sm:w-auto"
+                  type="submit"
+                >
+                  → Submit application
+                </button>
+                <p class="text-xs leading-normal text-content-secondary">
+                  Submitting does not guarantee a place. Event-specific terms
+                  and review timing will be confirmed before launch.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 02 / Need a hand? ===================== -->
+      <section class="bg-canvas-warm py-section" aria-labelledby="help-title">
+        <div class="container">
+          <header class="mb-8 flex flex-col gap-3 sm:mb-10">
+            <p class="eyebrow">02 / Need a hand?</p>
+            <h2
+              id="help-title"
+              class="font-sans text-2xl font-normal leading-[1.2] text-content-main sm:text-3xl"
+            >
+              We’re here to help.
+            </h2>
+            <p
+              class="max-w-narrow text-base leading-body text-content-secondary"
+            >
+              Questions about the form, a club application or your vehicle? Get
+              in touch before submitting.
+            </p>
+          </header>
+
+          <div class="grid grid-cols-1 gap-grid sm:grid-cols-2">
+            <div class="flex flex-col items-start gap-3">
+              <h3 class="font-sans text-xl font-normal leading-[1.3]">
+                Application support
+              </h3>
+              <p class="text-sm leading-body text-content-secondary">
+                <a
+                  class="text-content-main underline underline-offset-[3px] transition-colors duration-fast ease-standard hover:text-accent-brass-hover focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-accent-brass"
+                  href="mailto:applications@strata.com"
+                  >applications@strata.com</a
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-start gap-3">
+              <h3 class="font-sans text-xl font-normal leading-[1.3]">
+                Prefer a conversation?
+              </h3>
+              <p class="text-sm leading-body text-content-secondary">
+                Phone: [support number to be added]<br />
+                Social: [STRATA profile to be added]
+              </p>
+              <a
+                class="button button-primary mt-2 w-full sm:w-auto"
+                href="contact.html"
+                >→ Contact the team</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 03 / FAQ ===================== -->
+      <section class="py-section" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="mb-8 flex flex-col gap-3 sm:mb-10">
+            <p class="eyebrow">03 / Before you apply</p>
+            <h2
+              id="faq-title"
+              class="font-sans text-2xl font-normal leading-[1.2] text-content-main sm:text-3xl"
+            >
+              A few useful answers.
+            </h2>
+            <p
+              class="max-w-narrow text-base leading-body text-content-secondary"
+            >
+              Representative guidance. Final participation rules will be
+              confirmed for each event.
+            </p>
+          </header>
+
+          <div class="border-t border-line">
+            <details class="group border-b border-line py-5" open>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium leading-ui after:flex-none after:text-lg after:leading-none after:text-content-secondary after:content-['+'] group-open:after:content-['–'] focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-brass sm:text-[15px] [&::-webkit-details-marker]:hidden"
+              >
+                Who can apply?
+              </summary>
+              <p
+                class="mt-3 max-w-[880px] text-sm leading-body text-content-secondary"
+              >
+                Independent owners and automotive clubs are invited to share
+                their builds. Eligibility and vehicle categories will be
+                confirmed on each event page.
+              </p>
+            </details>
+
+            <details class="group border-b border-line py-5" open>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium leading-ui after:flex-none after:text-lg after:leading-none after:text-content-secondary after:content-['+'] group-open:after:content-['–'] focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-brass sm:text-[15px] [&::-webkit-details-marker]:hidden"
+              >
+                What do I need to submit?
+              </summary>
+              <p
+                class="mt-3 max-w-[880px] text-sm leading-body text-content-secondary"
+              >
+                Your contact details, vehicle make, model and year, a short
+                build story, recent photos and your preferred event. Include any
+                requirements in the notes field.
+              </p>
+            </details>
+
+            <details class="group border-b border-line py-5" open>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium leading-ui after:flex-none after:text-lg after:leading-none after:text-content-secondary after:content-['+'] group-open:after:content-['–'] focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-brass sm:text-[15px] [&::-webkit-details-marker]:hidden"
+              >
+                When is the application deadline?
+              </summary>
+              <p
+                class="mt-3 max-w-[880px] text-sm leading-body text-content-secondary"
+              >
+                Deadlines are specific to each event and will be listed in its
+                details. Dates and availability in this wireframe are
+                placeholders.
+              </p>
+            </details>
+
+            <details class="group border-b border-line py-5" open>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium leading-ui after:flex-none after:text-lg after:leading-none after:text-content-secondary after:content-['+'] group-open:after:content-['–'] focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-brass sm:text-[15px] [&::-webkit-details-marker]:hidden"
+              >
+                How does the selection process work?
+              </summary>
+              <p
+                class="mt-3 max-w-[880px] text-sm leading-body text-content-secondary"
+              >
+                The curation team reviews the vehicle story, presentation and
+                fit within the line-up. A review outcome and next steps are sent
+                to the email you provide.
+              </p>
+            </details>
+
+            <details class="group border-b border-line py-5" open>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium leading-ui after:flex-none after:text-lg after:leading-none after:text-content-secondary after:content-['+'] group-open:after:content-['–'] focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-brass sm:text-[15px] [&::-webkit-details-marker]:hidden"
+              >
+                Does applying guarantee a display space?
+              </summary>
+              <p
+                class="mt-3 max-w-[880px] text-sm leading-body text-content-secondary"
+              >
+                No. Submitting an application is a request to participate.
+                Acceptance, fees and event-specific conditions will be confirmed
+                separately.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <p class="logo">
+          <img src="assets/icons/logo.svg" alt="STRATA" loading="lazy" />
+        </p>
+        <p class="text">Cars bring us together. Culture keeps us connected.</p>
+      </div>
+
+      <nav class="footer-column" aria-label="Explore">
+        <h2 class="label">Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html#section-events">Events</a>
+        <a href="participate.html">Participate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="footer-column">
+        <h2 class="label">Stay connected</h2>
+        <a href="https://www.instagram.com/" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/" rel="noopener">YouTube</a>
+        <a href="mailto:hello@strata.com">Email</a>
+      </div>
+
+      <form class="footer-column newsletter" action="#" method="post">
+        <label class="label" for="newsletter-email">Email newsletter</label>
+        <input
+          class="input"
+          type="email"
+          id="newsletter-email"
+          name="newsletter_email"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+        />
+        <button class="button button-secondary" type="submit">Subscribe</button>
+      </form>
+
+      <small class="copyright"
+        >© STRATA · Automotive culture &amp; community</small
+      >
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      (function () {
+        var header = document.getElementById("site-header");
+        var toggle = header.querySelector(".menu-toggle");
+        toggle.addEventListener("click", function () {
+          var open = header.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", String(open));
+        });
+      })();
+    </script>
+  </body>
+</html>

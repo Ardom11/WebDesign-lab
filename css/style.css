@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   BASE: tokens that must stay CSS variables (they change per breakpoint)
+   Everything else lives in tailwind.config.js
+   Breakpoints are Tailwind defaults: sm = 640px, lg = 1024px
+   ========================================================================== */
+@layer base {
+  :root {
+    /* Mobile defaults */
+    --container-padding-x: 24px;
+    --section-padding-y: 48px;
+    --grid-gap: 20px;
+
+    --transition-duration-fast: 150ms;
+    --transition-duration-base: 250ms;
+    --transition-duration-slow: 400ms;
+  }
+
+  @media (min-width: theme("screens.sm")) {
+    :root {
+      --container-padding-x: 40px;
+      --section-padding-y: 72px;
+      --grid-gap: 24px;
+    }
+  }
+
+  @media (min-width: theme("screens.lg")) {
+    :root {
+      --container-padding-x: 72px;
+      --section-padding-y: 96px;
+      --grid-gap: 32px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --transition-duration-fast: 0ms;
+      --transition-duration-base: 0ms;
+      --transition-duration-slow: 0ms;
+    }
+  }
+
+  body {
+    @apply bg-canvas-light font-sans text-base font-normal leading-body text-content-main antialiased;
+  }
+
+  /* Preflight already resets h1-h3, p, dl, dd, figure margins, ol list-style,
+     img display/max-width and a color. It does not reset <address>. */
+  address {
+    @apply not-italic;
+  }
+}
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+@layer utilities {
+  /* Full-bleed background, content aligned to the 1296px container.
+     Used by .header and .footer. */
+  .px-container-fluid {
+    padding-inline: max(
+      var(--container-padding-x),
+      calc((100% - theme("maxWidth.container")) / 2)
+    );
+  }
+}
+
+/* ==========================================================================
+   COMPONENTS
+   Font sizes use Tailwind defaults where they match (text-xs 12px,
+   text-sm 14px, text-base 16px) and arbitrary values where the design
+   uses an off-scale size (11px, 13px, 28px).
+   ========================================================================== */
+@layer components {
+  .container {
+    @apply mx-auto w-full px-gutter;
+    max-width: calc(
+      theme("maxWidth.container") + 2 * var(--container-padding-x)
+    );
+  }
+
+  .skip-link {
+    @apply absolute left-2 top-2 z-10 -translate-y-[200%] rounded-sm bg-primary-navy px-4 py-2 text-content-inverse;
+  }
+
+  .skip-link:focus {
+    @apply translate-y-0;
+  }
+
+  .eyebrow,
+  .breadcrumb {
+    @apply text-[11px] font-normal uppercase leading-ui tracking-eyebrow text-content-secondary;
+  }
+
+  /* ------------------------------------------------------------------------
+     Buttons: <a class="button button-primary"> / .button-secondary
+     States: hover, active, focus-visible, :disabled / [aria-disabled],
+     [aria-busy] (primary only)
+     ------------------------------------------------------------------------ */
+  .button {
+    @apply relative m-0 inline-flex min-h-13 appearance-none items-center justify-center gap-2 whitespace-nowrap rounded-sm border border-solid border-transparent px-8 text-center font-sans text-xs font-semibold uppercase leading-none tracking-label no-underline;
+    @apply cursor-pointer transition-colors duration-base ease-standard;
+  }
+
+  .button:focus-visible {
+    @apply outline outline-2 outline-offset-[3px] outline-primary-navy;
+  }
+
+  /* Primary */
+  .button-primary {
+    @apply border-primary-navy bg-primary-navy text-content-inverse transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0;
+  }
+  .button-primary:hover {
+    @apply border-surface-dark-alt bg-surface-dark-alt;
+  }
+  .button-primary:active {
+    @apply border-canvas-deep bg-canvas-deep;
+  }
+  .button-primary:disabled,
+  .button-primary[aria-disabled="true"] {
+    @apply cursor-not-allowed border-canvas-warm bg-canvas-warm text-content-disabled;
+  }
+  .button-primary[aria-busy="true"] {
+    @apply pointer-events-none cursor-progress border-primary-navy bg-primary-navy text-content-inverse;
+  }
+  .button-primary[aria-busy="true"]::before {
+    content: "";
+    @apply absolute start-6 top-1/2 box-border h-3.5 w-3.5 -translate-y-1/2 rounded-full border-2 border-current;
+    border-top-color: transparent;
+  }
+
+  /* Secondary */
+  .button-secondary {
+    @apply border-primary-navy bg-surface-light text-content-main;
+  }
+  .button-secondary:hover {
+    @apply bg-canvas-warm;
+  }
+  .button-secondary:active {
+    @apply bg-line;
+  }
+  .button-secondary:disabled,
+  .button-secondary[aria-disabled="true"] {
+    @apply cursor-not-allowed border-line bg-surface-light text-content-disabled;
+  }
+
+  /* ------------------------------------------------------------------------
+     Header: .header > .header-left + .logo + .header-right (+ .menu-toggle)
+     Mobile: logo left, burger right, links collapse below (.is-open toggles)
+     sm+: three zones in one row, logo centered
+     ------------------------------------------------------------------------ */
+  .header {
+    @apply sticky top-0 z-50 flex w-full flex-wrap items-center justify-between gap-x-6 border-b border-line bg-canvas-light/80 backdrop-blur-md px-container-fluid py-4;
+    @apply sm:flex-nowrap sm:py-1.5;
+  }
+
+  .header .logo {
+    @apply order-none flex-auto sm:flex-none;
+  }
+
+  .header .logo img {
+    @apply h-13 w-auto flex-none;
+  }
+
+  .header-left,
+  .header-right {
+    @apply order-2 hidden min-w-0 shrink-0 basis-full flex-col items-start gap-3;
+    @apply sm:order-none sm:flex sm:flex-1 sm:flex-row sm:items-center sm:gap-6;
+  }
+
+  .header-left {
+    @apply sm:justify-start;
+  }
+
+  .header-right {
+    @apply sm:justify-end;
+  }
+
+  .header.is-open .header-left {
+    @apply flex pt-4 sm:pt-0;
+  }
+
+  .header.is-open .header-right {
+    @apply flex pt-3 sm:pt-0;
+  }
+
+  .header-left a,
+  .header-right a {
+    @apply font-sans text-[13px] font-normal leading-ui text-content-main no-underline transition-colors duration-fast ease-standard hover:text-accent-brass;
+  }
+
+  .header a:focus-visible,
+  .menu-toggle:focus-visible {
+    @apply rounded-xs outline outline-2 outline-offset-4 outline-accent-brass;
+  }
+
+  /* Burger button: mobile only */
+  .menu-toggle {
+    @apply order-1 inline-flex items-center justify-center border-0 bg-transparent p-0 text-content-main;
+    @apply cursor-pointer sm:hidden;
+  }
+
+  /* ------------------------------------------------------------------------
+     Footer: .footer > .footer-brand + 3 × .footer-column (last = .newsletter)
+     + .copyright
+     Mobile: 1 col · sm: brand on top + 2 cols · lg: 4 cols
+     ------------------------------------------------------------------------ */
+  .footer {
+    @apply grid w-full grid-cols-1 items-start gap-x-12 gap-y-8 border-t bg-canvas-warm px-container-fluid pb-8 pt-10 text-content-main;
+    @apply sm:grid-cols-2 sm:gap-y-10 sm:pt-12;
+    @apply lg:grid-cols-[1.2fr_1fr_1fr_1.2fr] lg:pt-14;
+  }
+
+  .footer-brand {
+    @apply col-span-full flex flex-col gap-3 lg:col-auto;
+  }
+
+  .footer-brand .logo {
+    @apply m-0 max-w-[260px]; 
+  }
+
+  .footer-brand .text {
+    @apply m-0 max-w-[260px] font-sans text-[13px] leading-normal text-content-secondary;
+  }
+
+  .footer-column {
+    @apply flex flex-col content-start gap-x-4 gap-y-2;
+  }
+
+  .footer .label {
+    @apply mx-0 mb-1 mt-0 basis-full font-sans text-[11px] font-medium uppercase leading-ui tracking-wider text-content-secondary;
+  }
+
+  .footer-column a {
+    @apply font-sans text-[13px] leading-ui text-content-main no-underline transition-colors duration-fast ease-standard hover:text-accent-brass;
+  }
+
+  .footer-column a[href^="mailto:"] {
+    @apply basis-full;
+  }
+
+  .footer a:focus-visible {
+    @apply rounded-xs outline outline-2 outline-offset-[3px] outline-accent-brass;
+  }
+
+  /* Newsletter form */
+  .newsletter {
+    @apply flex-col flex-nowrap gap-2.5;
+  }
+
+  .newsletter .input {
+    @apply box-border w-full rounded-sm border border-line bg-surface-light px-3.5 py-3 font-sans text-[13px] leading-ui text-content-main;
+    @apply transition-[border-color,box-shadow] duration-fast ease-standard;
+    @apply placeholder:text-content-disabled;
+    @apply focus:border-accent-brass focus:outline-none focus:ring-[3px] focus:ring-accent-brass-tint;
+  }
+
+  .newsletter .button {
+    @apply min-h-9 px-4 text-xs font-semibold normal-case tracking-[0.02em];
+  }
+
+  .copyright {
+    @apply col-span-full block border-t border-line pt-6 font-sans text-xs leading-ui text-content-secondary;
+  }
+}

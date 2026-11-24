@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STRATA - Spring Assembly</title>
+    <meta
+      name="description"
+      content="A gathering of considered builds and the people behind them. One day to celebrate every layer of automotive culture."
+    />
+
+    <!-- Fonts used by the design tokens -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ===================== Header ===================== -->
+    <header class="header" id="site-header">
+      <nav class="header-left" id="nav-primary" aria-label="Primary navigation">
+        <a href="index.html#section-events">Events</a>
+        <a href="participate.html">Participate</a>
+      </nav>
+
+      <a class="logo" href="index.html" aria-label="STRATA home">
+        <img src="assets/icons/logo.svg" alt="STRATA" loading="lazy" />
+      </a>
+
+      <nav class="header-right" id="nav-secondary" aria-label="Secondary navigation">
+        <a href="archive.html">Archive</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile only -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-primary nav-secondary"
+        aria-label="Menu"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 6h18M3 12h18M3 18h18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <!-- ===================== Event hero ===================== -->
+      <section
+        class="bg-canvas-warm pb-10 pt-6 sm:pb-16 sm:pt-10"
+        aria-labelledby="event-title"
+      >
+        <div class="container">
+          <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+            <ol class="flex flex-wrap">
+              <li>
+                <a
+                  class="no-underline transition-colors duration-fast ease-standard hover:text-accent-brass"
+                  href="events.html"
+                  >Events</a
+                >
+              </li>
+              <li
+                class="before:mx-[0.5em] before:content-['/']"
+                aria-current="page"
+              >
+                Spring Assembly
+              </li>
+            </ol>
+          </nav>
+
+          <figure
+            class="flex aspect-[342/240] items-center justify-center overflow-hidden border border-[#d6d6d6] bg-placeholder sm:aspect-[1296/450]"
+          >
+            <div
+              class="flex h-full w-full flex-col items-center text-center text-xs leading-ui text-content-secondary"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="assets/images/hero.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </figure>
+
+          <div
+            class="mt-6 grid grid-cols-1 items-start gap-y-8 sm:mt-8 sm:grid-cols-[minmax(0,1fr)_320px] sm:gap-x-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-x-16"
+          >
+            <div>
+              <h1
+                id="event-title"
+                class="font-display text-[40px] font-light leading-headline tracking-[-0.005em] text-primary-navy sm:text-5xl lg:text-[64px]"
+              >
+                <span class="block">STRATA /</span>
+                <span class="block">Spring Assembly</span>
+              </h1>
+              <p
+                class="mt-4 max-w-narrow text-base leading-body text-content-secondary sm:mt-6"
+              >
+                A gathering of considered builds and the people behind them. One
+                day to celebrate every layer of automotive culture.
+              </p>
+            </div>
+
+            <aside
+              class="flex flex-col gap-5 rounded-md bg-surface-light p-6 shadow-md"
+              aria-label="Ticket and venue information"
+            >
+              <img
+                class="h-auto w-[88px]"
+                src="assets/icons/ticket.svg"
+                alt=""
+                loading="lazy"
+              />
+
+              <dl class="grid grid-cols-2 gap-6">
+                <div>
+                  <dt
+                    class="text-xs uppercase leading-ui tracking-[0.04em] text-content-secondary"
+                  >
+                    Start
+                  </dt>
+                  <dd class="flex flex-col text-base leading-ui">
+                    <time datetime="2027-05-17">17/5/2027</time>
+                    <span class="text-[11px] text-content-secondary">Sat</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="text-xs uppercase leading-ui tracking-[0.04em] text-content-secondary"
+                  >
+                    End
+                  </dt>
+                  <dd class="flex flex-col text-base leading-ui">
+                    <time datetime="2027-05-18">18/5/2027</time>
+                    <span class="text-[11px] text-content-secondary">Sun</span>
+                  </dd>
+                </div>
+              </dl>
+
+              <address
+                class="flex flex-col text-sm leading-body text-content-secondary"
+              >
+                <strong class="font-semibold text-content-main"
+                  >Venue TBC</strong
+                >
+                <span>Kurfürstendamm 183</span>
+                <span>10001 Berlin,</span>
+                <span>Germany</span>
+              </address>
+
+              <a
+                class="button button-primary min-h-12 w-full text-sm font-medium normal-case tracking-[0.02em]"
+                href="#tickets"
+                >→ Buy ticket</a
+              >
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Programme ===================== -->
+      <section
+        class="bg-canvas-light py-section"
+        aria-labelledby="programme-title"
+      >
+        <div class="container">
+          <p class="eyebrow">01 / The programme</p>
+          <h2
+            id="programme-title"
+            class="mt-2 font-sans text-[32px] font-normal leading-[1.2] text-primary-navy sm:text-[40px]"
+          >
+            The day, at a glance.
+          </h2>
+
+          <div
+            class="mt-12 hidden grid-cols-[120px_minmax(0,1fr)] gap-x-6 border-b border-[#cfc9ba] pb-4 text-[11px] font-semibold uppercase leading-ui tracking-eyebrow sm:grid lg:grid-cols-[188px_minmax(0,1fr)]"
+            aria-hidden="true"
+          >
+            <span>Time</span>
+            <span>Activity / Details</span>
+          </div>
+
+          <ol class="mt-8 sm:mt-0">
+            <li
+              class="grid grid-cols-[56px_minmax(0,1fr)] gap-x-4 border-b border-line py-5 max-sm:first:border-t max-sm:first:border-t-[#cfc9ba] sm:grid-cols-[120px_minmax(0,1fr)] sm:gap-x-6 sm:py-6 sm:last:border-b-0 lg:grid-cols-[188px_minmax(0,1fr)]"
+            >
+              <time
+                class="pt-1 text-base font-light leading-ui tabular-nums sm:pt-0 sm:text-xl"
+                datetime="09:00"
+                >09:00</time
+              >
+              <div>
+                <h3
+                  class="font-sans text-xl font-medium leading-ui text-primary-navy"
+                >
+                  Participant arrival
+                </h3>
+                <p
+                  class="mt-1 text-base leading-normal text-content-secondary sm:text-sm"
+                >
+                  Check-in, vehicle placement and exhibitor briefing.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="grid grid-cols-[56px_minmax(0,1fr)] gap-x-4 border-b border-line py-5 max-sm:first:border-t max-sm:first:border-t-[#cfc9ba] sm:grid-cols-[120px_minmax(0,1fr)] sm:gap-x-6 sm:py-6 sm:last:border-b-0 lg:grid-cols-[188px_minmax(0,1fr)]"
+            >
+              <time
+                class="pt-1 text-base font-light leading-ui tabular-nums sm:pt-0 sm:text-xl"
+                datetime="10:00"
+                >10:00</time
+              >
+              <div>
+                <h3
+                  class="font-sans text-xl font-medium leading-ui text-primary-navy"
+                >
+                  Doors open
+                </h3>
+                <p
+                  class="mt-1 text-base leading-normal text-content-secondary sm:text-sm"
+                >
+                  Explore the curated showcase and meet the clubs.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="grid grid-cols-[56px_minmax(0,1fr)] gap-x-4 border-b border-line py-5 max-sm:first:border-t max-sm:first:border-t-[#cfc9ba] sm:grid-cols-[120px_minmax(0,1fr)] sm:gap-x-6 sm:py-6 sm:last:border-b-0 lg:grid-cols-[188px_minmax(0,1fr)]"
+            >
+              <time
+                class="pt-1 text-base font-light leading-ui tabular-nums sm:pt-0 sm:text-xl"
+                datetime="12:00"
+                >12:00</time
+              >
+              <div>
+                <h3
+                  class="font-sans text-xl font-medium leading-ui text-primary-navy"
+                >
+                  Behind the build
+                </h3>
+                <p
+                  class="mt-1 text-base leading-normal text-content-secondary sm:text-sm"
+                >
+                  Owner conversations on craft, process and individuality.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="grid grid-cols-[56px_minmax(0,1fr)] gap-x-4 border-b border-line py-5 max-sm:first:border-t max-sm:first:border-t-[#cfc9ba] sm:grid-cols-[120px_minmax(0,1fr)] sm:gap-x-6 sm:py-6 sm:last:border-b-0 lg:grid-cols-[188px_minmax(0,1fr)]"
+            >
+              <time
+                class="pt-1 text-base font-light leading-ui tabular-nums sm:pt-0 sm:text-xl"
+                datetime="14:00"
+                >14:00</time
+              >
+              <div>
+                <h3
+                  class="font-sans text-xl font-medium leading-ui text-primary-navy"
+                >
+                  Community spotlight
+                </h3>
+                <p
+                  class="mt-1 text-base leading-normal text-content-secondary sm:text-sm"
+                >
+                  Club introductions and featured vehicle walkarounds.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="grid grid-cols-[56px_minmax(0,1fr)] gap-x-4 border-b border-line py-5 max-sm:first:border-t max-sm:first:border-t-[#cfc9ba] sm:grid-cols-[120px_minmax(0,1fr)] sm:gap-x-6 sm:py-6 sm:last:border-b-0 lg:grid-cols-[188px_minmax(0,1fr)]"
+            >
+              <time
+                class="pt-1 text-base font-light leading-ui tabular-nums sm:pt-0 sm:text-xl"
+                datetime="16:00"
+                >16:00</time
+              >
+              <div>
+                <h3
+                  class="font-sans text-xl font-medium leading-ui text-primary-navy"
+                >
+                  Open gathering
+                </h3>
+                <p
+                  class="mt-1 text-base leading-normal text-content-secondary sm:text-sm"
+                >
+                  Photography, food and time to connect with other enthusiasts.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="grid grid-cols-[56px_minmax(0,1fr)] gap-x-4 border-b border-line py-5 max-sm:first:border-t max-sm:first:border-t-[#cfc9ba] sm:grid-cols-[120px_minmax(0,1fr)] sm:gap-x-6 sm:py-6 sm:last:border-b-0 lg:grid-cols-[188px_minmax(0,1fr)]"
+            >
+              <time
+                class="pt-1 text-base font-light leading-ui tabular-nums sm:pt-0 sm:text-xl"
+                datetime="18:00"
+                >18:00</time
+              >
+              <div>
+                <h3
+                  class="font-sans text-xl font-medium leading-ui text-primary-navy"
+                >
+                  Event close
+                </h3>
+                <p
+                  class="mt-1 text-base leading-normal text-content-secondary sm:text-sm"
+                >
+                  Coordinated departure for participants and visitors.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===================== Location ===================== -->
+      <section
+        id="location"
+        class="border-t bg-canvas-light py-section"
+        aria-labelledby="location-title"
+      >
+        <div class="container">
+          <p class="eyebrow">02 / Location</p>
+          <h2
+            id="location-title"
+            class="mt-2 font-sans text-[32px] font-normal leading-[1.2] text-primary-navy sm:text-[40px]"
+          >
+            Where to find a meet up.
+          </h2>
+ 
+          <div
+            class="mt-8 grid grid-cols-1 items-start gap-y-8 sm:mt-12 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] sm:gap-x-10 lg:gap-x-16"
+          >
+            <div class="flex flex-col gap-5">
+              <address
+                class="flex flex-col text-base leading-body text-content-secondary"
+              >
+                <strong class="font-semibold text-content-main"
+                  >Venue TBC</strong
+                >
+                <span>Kurfürstendamm 183</span>
+                <span>10001 Berlin,</span>
+                <span>Germany</span>
+              </address>
+ 
+              <a
+                class="inline-flex w-fit items-center gap-2 text-sm font-medium text-primary-navy underline decoration-2 underline-offset-4 transition-colors duration-fast ease-standard hover:text-accent-brass"
+                href="https://www.google.com/maps/dir/?api=1&destination=Kurf%C3%BCrstendamm+183%2C+Berlin%2C+Germany"
+                target="_blank"
+                rel="noopener"
+                >→ Get directions<span class="sr-only">
+                  (opens Google Maps in a new tab)</span
+                ></a
+              >
+            </div>
+ 
+            <div
+              class="aspect-[4/3] w-full overflow-hidden border border-line bg-placeholder sm:aspect-[16/10]"
+            >
+              <iframe
+                class="h-full w-full border-0 grayscale transition duration-300 hover:grayscale-0 focus:grayscale-0 motion-reduce:transition-none"
+                title="Map showing the event location, Kurfürstendamm 183, Berlin"
+                src="https://maps.google.com/maps?q=Kurf%C3%BCrstendamm+183%2C+Berlin%2C+Germany&amp;z=15&amp;output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <p class="logo">
+          <img src="assets/icons/logo.svg" alt="STRATA" loading="lazy" />
+        </p>
+        <p class="text">Cars bring us together. Culture keeps us connected.</p>
+      </div>
+
+      <nav class="footer-column" aria-label="Explore">
+        <h2 class="label">Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html#section-events">Events</a>
+        <a href="participate.html">Participate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="footer-column">
+        <h2 class="label">Stay connected</h2>
+        <a href="https://www.instagram.com/" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/" rel="noopener">YouTube</a>
+        <a href="mailto:hello@strata.com">Email</a>
+      </div>
+
+      <form class="footer-column newsletter" action="#" method="post">
+        <label class="label" for="newsletter-email">Email newsletter</label>
+        <input
+          class="input"
+          type="email"
+          id="newsletter-email"
+          name="email"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+        />
+        <button class="button button-secondary" type="submit">Subscribe</button>
+      </form>
+
+      <small class="copyright"
+        >© STRATA · Automotive culture &amp; community</small
+      >
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      (function () {
+        var header = document.getElementById("site-header");
+        var toggle = header.querySelector(".menu-toggle");
+        toggle.addEventListener("click", function () {
+          var open = header.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", String(open));
+        });
+      })();
+    </script>
+  </body>
+</html>

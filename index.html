@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STRATA — Automotive culture &amp; community</title>
+    <meta
+      name="description"
+      content="Discover STRATA automotive gatherings, independent clubs, and the people shaping car culture."
+    />
+
+    <!-- Fonts used by the design tokens -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ===================== Header ===================== -->
+    <header class="header" id="site-header">
+      <nav class="header-left" id="nav-primary" aria-label="Primary navigation">
+        <a href="#section-events">Events</a>
+        <a href="participate.html">Participate</a>
+      </nav>
+
+      <a class="logo" href="#top" aria-label="STRATA home">
+        <img src="assets/icons/logo.svg" alt="STRATA" loading="lazy" />
+      </a>
+
+      <nav class="header-right" id="nav-secondary" aria-label="Secondary navigation">
+        <a href="archive.html">Archive</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile only -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-primary nav-secondary"
+        aria-label="Menu"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 6h18M3 12h18M3 18h18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <!-- ==========================================================
+           HERO
+           Mobile: 1 col · sm: 2 equal cols · lg: 1fr / 1.1fr
+           ========================================================== -->
+      <section
+        class="box-border grid w-full grid-cols-1 items-center gap-y-8 bg-canvas-warm px-container-fluid py-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-10 sm:py-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-x-16 lg:py-16"
+        aria-labelledby="page-title"
+      >
+        <div class="flex min-w-0 flex-col items-start">
+          <h1
+            class="mb-5 font-display text-[40px] font-medium leading-headline text-content-main sm:text-[48px] lg:text-[56px]"
+            id="page-title"
+          >
+            More than cars.<br />A culture in motion.
+          </h1>
+          <p
+            class="mb-7 max-w-[460px] text-base font-normal leading-body text-content-secondary"
+          >
+            STRATA brings remarkable builds and the people behind them together.
+            Discover curated autofestivals, independent clubs and a community
+            driven by a shared love of automotive culture.
+          </p>
+          <div
+            class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center"
+          >
+            <a href="#section-events" class="button button-primary"
+              ><span aria-hidden="true">→</span> Explore upcoming events</a
+            >
+            <a href="about.html" class="button button-secondary"
+              >About STRATA</a
+            >
+          </div>
+        </div>
+        <div class="min-w-0">
+          <img src="assets/images/hero.jpg" alt="Hero image" loading="lazy" />
+        </div>
+      </section>
+
+      <!-- ==========================================================
+           EVENTS SECTION
+           ========================================================== -->
+      <section
+        id="section-events"
+        class="w-full border-t border-line bg-canvas-light px-container-fluid py-section"
+        aria-labelledby="events-title"
+      >
+        <!-- ========= Section heading ========= -->
+        <p
+          class="mb-3 font-sans text-[11px] font-medium uppercase leading-ui tracking-label text-content-secondary"
+        >
+          01 / Upcoming events
+        </p>
+        <h2
+          class="mb-7 font-display text-[32px] font-semibold leading-headline text-content-main sm:mb-10 sm:text-[40px]"
+          id="events-title"
+        >
+          Find your next gathering.
+        </h2>
+
+        <!-- ========= Events list ========= -->
+        <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-grid">
+          <!-- ===== Event 1: Spring Assembly ===== -->
+          <li class="min-w-0">
+            <article class="group relative flex flex-col items-start">
+              <figure
+                class="relative mb-5 aspect-[3/2] max-h-[220px] w-full overflow-hidden rounded-sm sm:aspect-video sm:max-h-[260px] lg:max-h-[300px]"
+              >
+                <img
+                  class="absolute inset-0 h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
+                  src="assets/images/hero.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3
+                class="mb-2 font-sans text-xl font-medium leading-[1.3] text-content-main"
+              >
+                Spring Assembly
+              </h3>
+              <p
+                class="mb-2.5 text-[11px] font-medium uppercase leading-ui tracking-[0.08em] text-content-secondary"
+              >
+                <time datetime="2027-04-18">18 Apr 2027</time> / Upcoming
+              </p>
+              <p class="mb-3 text-[13px] leading-ui text-content-main">
+                Berlin, DE
+              </p>
+              <a
+                href="event.html"
+                class="text-[13px] leading-ui text-content-main underline decoration-1 underline-offset-4 transition-colors duration-fast ease-standard after:absolute after:inset-0 hover:text-accent-brass-hover focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
+              >
+                <span aria-hidden="true">→</span> View event
+              </a>
+            </article>
+          </li>
+
+          <!-- ===== Event 2: Summer Sessions ===== -->
+          <li class="min-w-0">
+            <article class="group relative flex flex-col items-start">
+              <figure
+                class="relative mb-5 aspect-[3/2] max-h-[220px] w-full overflow-hidden rounded-sm sm:aspect-video sm:max-h-[260px] lg:max-h-[300px]"
+              >
+                <img
+                  class="absolute inset-0 h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
+                  src="assets/images/hero.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3
+                class="mb-2 font-sans text-xl font-medium leading-[1.3] text-content-main"
+              >
+                Summer Sessions
+              </h3>
+              <p
+                class="mb-2.5 text-[11px] font-medium uppercase leading-ui tracking-[0.08em] text-content-secondary"
+              >
+                To be announced / Upcoming
+              </p>
+              <p class="mb-3 text-[13px] leading-ui text-content-main">
+                Leipzig, DE
+              </p>
+              <a
+                href="#section-events"
+                class="text-[13px] leading-ui text-content-main underline decoration-1 underline-offset-4 transition-colors duration-fast ease-standard after:absolute after:inset-0 hover:text-accent-brass-hover focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
+              >
+                <span aria-hidden="true">→</span> Soon
+              </a>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ==========================================================
+           GALLERY
+           ========================================================== -->
+      <section
+        id="section-gallery"
+        class="w-full border-t border-line bg-canvas-light px-container-fluid py-section"
+        aria-labelledby="gallery-title"
+      >
+        <p
+          class="mb-3sansfont-sans text-[11px] font-medium uppercase leading-ui tracking-label text-content-secondary"
+        >
+          02 / THE ATMOSPHERE
+        </p>
+        <h2
+          class="mb-4 font-display text-[32px] font-semibold leading-headline text-content-main sm:text-[40px]"
+          id="gallery-title"
+        >
+          Built around people.
+        </h2>
+        <p
+          class="mb-7 max-w-narrow text-base font-normal leading-body text-content-secondary sm:mb-10"
+        >
+          From the first arrival to the last conversation. A look at the details
+          and connections that make STRATA.
+        </p>
+        <ul
+          class="mb-8 grid grid-cols-1 gap-4 sm:mb-10 sm:grid-cols-3 sm:gap-grid lg:mb-12"
+        >
+          <li class="min-w-0">
+            <img
+              class="h-full w-full object-cover"
+              src="assets/images/hero.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </li>
+          <li class="min-w-0">
+            <img
+              class="h-full w-full object-cover"
+              src="assets/images/hero.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </li>
+          <li class="min-w-0">
+            <img
+              class="h-full w-full object-cover"
+              src="assets/images/hero.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </li>
+        </ul>
+        <a href="archive.html" class="button button-primary"
+          ><span aria-hidden="true">→</span> Archive</a
+        >
+      </section>
+
+      <!-- ==========================================================
+           APPLY ("Bring your build")
+           Mobile: image on top · sm+: image | content
+           ========================================================== -->
+      <section
+        id="section-apply"
+        class="grid w-full grid-cols-1 items-center gap-y-7 border-t border-line bg-canvas-light px-container-fluid py-section sm:grid-cols-2 sm:gap-x-10 sm:gap-y-8 lg:gap-x-16"
+        aria-labelledby="apply-title"
+      >
+        <div class="min-w-0">
+          <img
+            class="h-full w-full object-cover"
+            src="assets/images/hero.jpg"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+        <div class="flex min-w-0 flex-col items-start">
+          <p
+            class="mb-3sansfont-sans text-[11px] font-medium uppercase leading-ui tracking-label text-content-secondary"
+          >
+            03 / BRING YOUR BUILD
+          </p>
+          <h2
+            class="mb-4 font-display text-[32px] font-semibold leading-headline text-content-main sm:text-[40px]"
+            id="apply-title"
+          >
+            Every build has a story.<br />Let’s see yours.
+          </h2>
+          <p
+            class="mb-6 max-w-[460px] text-base font-normal leading-body text-content-secondary"
+          >
+            Original, restored or reimagined — we’re interested in the thought
+            behind the car. Apply to showcase your vehicle at an upcoming STRATA
+            event.
+          </p>
+          <ol class="mb-7 flex flex-col gap-2 [counter-reset:step]">
+            <li
+              class="text-sm leading-normal text-accent-brass [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
+            >
+              Choose your event
+            </li>
+            <li
+              class="text-sm leading-normal text-accent-brass [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
+            >
+              Share your vehicle and photos
+            </li>
+            <li
+              class="text-sm leading-normal text-accent-brass [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
+            >
+              Hear back from the curation team
+            </li>
+          </ol>
+          <a href="participate.html" class="button button-primary"
+            ><span aria-hidden="true">→</span> Apply with your car</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <p class="logo">
+          <img src="assets/icons/logo.svg" alt="STRATA" loading="lazy" />
+        </p>
+        <p class="text">Cars bring us together. Culture keeps us connected.</p>
+      </div>
+
+      <nav class="footer-column" aria-label="Explore">
+        <h2 class="label">Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#section-events">Events</a>
+        <a href="participate.html">Participate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="footer-column">
+        <h2 class="label">Stay connected</h2>
+        <a href="https://www.instagram.com/" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/" rel="noopener">YouTube</a>
+        <a href="mailto:hello@strata.com">Email</a>
+      </div>
+
+      <form class="footer-column newsletter" action="#" method="post">
+        <label class="label" for="newsletter-email">Email newsletter</label>
+        <input
+          type="email"
+          id="newsletter-email"
+          name="email"
+          class="input"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+        />
+        <button type="submit" class="button button-secondary">Subscribe</button>
+      </form>
+
+      <small class="copyright"
+        >© STRATA · Automotive culture &amp; community</small
+      >
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      (function () {
+        var header = document.getElementById("site-header");
+        var toggle = header.querySelector(".menu-toggle");
+        toggle.addEventListener("click", function () {
+          var open = header.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", String(open));
+        });
+      })();
+    </script>
+  </body>
+</html>
