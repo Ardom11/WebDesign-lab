@@ -17,8 +17,14 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
 
     <link rel="stylesheet" href="css/output.css" />
   </head>
@@ -37,7 +43,11 @@
         <img src="assets/icons/logo.svg" alt="STRATA" loading="lazy" />
       </a>
 
-      <nav class="header-right" id="nav-secondary" aria-label="Secondary navigation">
+      <nav
+        class="header-right"
+        id="nav-secondary"
+        aria-label="Secondary navigation"
+      >
         <a href="archive.html">Archive</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -76,7 +86,14 @@
             class="mb-5 font-display text-[40px] font-medium leading-headline text-content-main sm:text-[48px] lg:text-[56px]"
             id="page-title"
           >
-            More than cars.<br />A culture in motion.
+            More than cars.<br />
+            <span class="relative block">
+              <span class="invisible block" aria-hidden="true"
+                >A culture in stillness.</span
+              >
+              <span id="typed-display" class="absolute inset-0"></span>
+            </span>
+            <span id="typed-text" class="hidden"></span>
           </h1>
           <p
             class="mb-7 max-w-[460px] text-base font-normal leading-body text-content-secondary"
@@ -226,29 +243,53 @@
         <ul
           class="mb-8 grid grid-cols-1 gap-4 sm:mb-10 sm:grid-cols-3 sm:gap-grid lg:mb-12"
         >
-          <li class="min-w-0">
-            <img
-              class="h-full w-full object-cover"
-              src="assets/images/hero.jpg"
-              alt=""
-              loading="lazy"
-            />
+          <li class="group min-w-0">
+            <a
+              href="assets/images/hero.jpg"
+              data-fancybox="archive-gallery"
+              data-caption="Golden hour arrivals — engines cooling, conversations starting."
+              class="relative block overflow-hidden rounded-sm focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
+              aria-label="Open photo: Golden hour arrivals"
+            >
+              <img
+                class="h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
+                src="assets/images/hero.jpg"
+                alt="Golden hour arrivals at a STRATA gathering"
+                loading="lazy"
+              />
+            </a>
           </li>
-          <li class="min-w-0">
-            <img
-              class="h-full w-full object-cover"
-              src="assets/images/hero.jpg"
-              alt=""
-              loading="lazy"
-            />
+          <li class="group min-w-0">
+            <a
+              href="assets/images/hero.jpg"
+              data-fancybox="archive-gallery"
+              data-caption="Every badge tells a story — owners stand beside their builds all weekend."
+              class="relative block overflow-hidden rounded-sm focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
+              aria-label="Open photo: Owners beside their builds"
+            >
+              <img
+                class="h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
+                src="assets/images/hero.jpg"
+                alt="Owner standing beside a restored car"
+                loading="lazy"
+              />
+            </a>
           </li>
-          <li class="min-w-0">
-            <img
-              class="h-full w-full object-cover"
-              src="assets/images/hero.jpg"
-              alt=""
-              loading="lazy"
-            />
+          <li class="group min-w-0">
+            <a
+              href="assets/images/hero.jpg"
+              data-fancybox="archive-gallery"
+              data-caption="The last lap of the day — tails and taillights heading home."
+              class="relative block overflow-hidden rounded-sm focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
+              aria-label="Open photo: The last lap of the day"
+            >
+              <img
+                class="h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
+                src="assets/images/hero.jpg"
+                alt="Cars leaving the event ground at dusk"
+                loading="lazy"
+              />
+            </a>
           </li>
         </ul>
         <a href="archive.html" class="button button-primary"
@@ -368,13 +409,50 @@
                   role="img"
                   aria-label="Rated 5 out of 5"
                 >
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
                 </div>
-                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                <blockquote
+                  class="flex-1 text-[15px] leading-body text-content-main"
+                >
                   “The curation is on another level. I drove four hours and
                   would have driven ten — every build had something worth
                   studying.”
@@ -408,16 +486,53 @@
                   role="img"
                   aria-label="Rated 5 out of 5"
                 >
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
                 </div>
-                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
-                  “It’s the conversations that stay with you. No fences, no
-                  VIP ropes — just owners standing next to their cars, telling
-                  the story of every scratch.”
+                <blockquote
+                  class="flex-1 text-[15px] leading-body text-content-main"
+                >
+                  “It’s the conversations that stay with you. No fences, no VIP
+                  ropes — just owners standing next to their cars, telling the
+                  story of every scratch.”
                 </blockquote>
                 <figcaption class="mt-6 flex items-center gap-3">
                   <img
@@ -448,15 +563,52 @@
                   role="img"
                   aria-label="Rated 5 out of 5"
                 >
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
                 </div>
-                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
-                  “I came looking for a car show and found a community
-                  instead. Applied with my own build the same week.”
+                <blockquote
+                  class="flex-1 text-[15px] leading-body text-content-main"
+                >
+                  “I came looking for a car show and found a community instead.
+                  Applied with my own build the same week.”
                 </blockquote>
                 <figcaption class="mt-6 flex items-center gap-3">
                   <img
@@ -487,15 +639,52 @@
                   role="img"
                   aria-label="Rated 5 out of 5"
                 >
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
                 </div>
-                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
-                  “As a photographer: the light, the cars and the people —
-                  it’s the friendliest event of the season to shoot.”
+                <blockquote
+                  class="flex-1 text-[15px] leading-body text-content-main"
+                >
+                  “As a photographer: the light, the cars and the people — it’s
+                  the friendliest event of the season to shoot.”
                 </blockquote>
                 <figcaption class="mt-6 flex items-center gap-3">
                   <img
@@ -526,13 +715,50 @@
                   role="img"
                   aria-label="Rated 5 out of 5"
                 >
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
                 </div>
-                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                <blockquote
+                  class="flex-1 text-[15px] leading-body text-content-main"
+                >
                   “The review process felt honest. They asked about the build,
                   not about my follower count. That says everything.”
                 </blockquote>
@@ -565,13 +791,50 @@
                   role="img"
                   aria-label="Rated 5 out of 5"
                 >
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
-                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-star" />
+                  </svg>
                 </div>
-                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                <blockquote
+                  class="flex-1 text-[15px] leading-body text-content-main"
+                >
                   “Well organised, relaxed pace, great coffee. My kids didn’t
                   want to leave — neither did I, honestly.”
                 </blockquote>
@@ -597,7 +860,9 @@
 
           <!-- ========= Navigation & pagination ========= -->
           <div class="mt-8 flex items-center justify-between">
-            <div class="reviews-pagination swiper-pagination !static !mt-0"></div>
+            <div
+              class="reviews-pagination swiper-pagination !static !mt-0"
+            ></div>
             <div class="flex items-center gap-3">
               <button
                 type="button"
@@ -673,6 +938,65 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      const fullStrings = [
+        "A culture in motion.",
+        "A culture in stillness.",
+        "A culture in details.",
+      ];
+
+      const source = document.getElementById("typed-text");
+      const display = document.getElementById("typed-display");
+
+      const shown = document.createTextNode("");
+      const rest = document.createElement("span");
+      rest.style.visibility = "hidden";
+      display.append(shown, rest);
+
+      let typed; // assigned below
+
+      // Mirror what Typed.js types into the visible element
+      new MutationObserver(() => {
+        if (!typed) return;
+        const current = source.textContent;
+        const full = fullStrings[typed.arrayPos] ?? current;
+        shown.nodeValue = current;
+        rest.textContent = full.slice(current.length);
+      }).observe(source, {
+        childList: true,
+        characterData: true,
+        subtree: true,
+      });
+
+      typed = new Typed("#typed-text", {
+        strings: [
+          "A culture in motion. ^1000",
+          "A culture in stillness. ^1000",
+          "A culture in details. ^3000",
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+        showCursor: false,
+      });
+    </script>
+    <script>
+      // Gallery lightbox (Fancybox 5): fade transition + zoom
+      (function () {
+        if (typeof Fancybox === "undefined") return;
+        Fancybox.bind('[data-fancybox="archive-gallery"]', {
+          zoom: true,
+          showClass: "f-fadeIn",
+          hideClass: "f-fadeOut",
+          Toolbar: {
+            display: {
+              left: ["infobar"],
+              right: ["slideshow", "thumbs", "close"],
+            },
+          },
+        });
+      })();
+    </script>
     <script>
       // Reviews slider (Swiper 11)
       (function () {
