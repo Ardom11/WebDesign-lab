@@ -17,6 +17,9 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
     <link rel="stylesheet" href="css/output.css" />
   </head>
 
@@ -311,6 +314,305 @@
           >
         </div>
       </section>
+
+      <!-- ==========================================================
+           REVIEWS
+           Swiper 11 semantic markup: .swiper > .swiper-wrapper > .swiper-slide
+           ========================================================== -->
+      <section
+        id="section-reviews"
+        class="w-full border-t border-line bg-canvas-warm px-container-fluid py-section"
+        aria-labelledby="reviews-title"
+      >
+        <!-- Star icon, referenced by every rating -->
+        <svg width="0" height="0" class="absolute" aria-hidden="true">
+          <symbol id="icon-star" viewBox="0 0 24 24">
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"
+            />
+          </symbol>
+        </svg>
+
+        <!-- ========= Section heading ========= -->
+        <p
+          class="mb-3 font-sans text-[11px] font-medium uppercase leading-ui tracking-label text-content-secondary"
+        >
+          04 / What people say
+        </p>
+        <h2
+          class="mb-4 font-display text-[32px] font-semibold leading-headline text-content-main sm:text-[40px]"
+          id="reviews-title"
+        >
+          Voices from the field.
+        </h2>
+        <p
+          class="mb-8 max-w-narrow text-base font-normal leading-body text-content-secondary sm:mb-10"
+        >
+          Owners, visitors and volunteers on what a STRATA weekend feels like.
+        </p>
+
+        <div
+          class="reviews-swiper swiper pb-14"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Visitor reviews"
+        >
+          <ul class="swiper-wrapper list-none" aria-live="polite">
+            <!-- ===== Slide 1 ===== -->
+            <li class="swiper-slide h-auto">
+              <figure
+                class="flex h-full flex-col rounded-md border border-line bg-surface-light p-6 shadow-xs"
+              >
+                <div
+                  class="mb-4 flex gap-1 text-accent-brass"
+                  role="img"
+                  aria-label="Rated 5 out of 5"
+                >
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                </div>
+                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                  “The curation is on another level. I drove four hours and
+                  would have driven ten — every build had something worth
+                  studying.”
+                </blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img
+                    class="h-11 w-11 shrink-0 rounded-full object-cover"
+                    src="https://i.pravatar.cc/88?img=12"
+                    alt="Portrait of Marek Kowalski"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                  <span class="text-[13px] leading-ui text-content-main">
+                    Marek Kowalski
+                    <span class="block text-content-secondary"
+                      >911 owner · Attendee</span
+                    >
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- ===== Slide 2 ===== -->
+            <li class="swiper-slide h-auto">
+              <figure
+                class="flex h-full flex-col rounded-md border border-line bg-surface-light p-6 shadow-xs"
+              >
+                <div
+                  class="mb-4 flex gap-1 text-accent-brass"
+                  role="img"
+                  aria-label="Rated 5 out of 5"
+                >
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                </div>
+                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                  “It’s the conversations that stay with you. No fences, no
+                  VIP ropes — just owners standing next to their cars, telling
+                  the story of every scratch.”
+                </blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img
+                    class="h-11 w-11 shrink-0 rounded-full object-cover"
+                    src="https://i.pravatar.cc/88?img=47"
+                    alt="Portrait of Anna Lindqvist"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                  <span class="text-[13px] leading-ui text-content-main">
+                    Anna Lindqvist
+                    <span class="block text-content-secondary"
+                      >Volvo Amazon · Exhibitor</span
+                    >
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- ===== Slide 3 ===== -->
+            <li class="swiper-slide h-auto">
+              <figure
+                class="flex h-full flex-col rounded-md border border-line bg-surface-light p-6 shadow-xs"
+              >
+                <div
+                  class="mb-4 flex gap-1 text-accent-brass"
+                  role="img"
+                  aria-label="Rated 5 out of 5"
+                >
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                </div>
+                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                  “I came looking for a car show and found a community
+                  instead. Applied with my own build the same week.”
+                </blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img
+                    class="h-11 w-11 shrink-0 rounded-full object-cover"
+                    src="https://i.pravatar.cc/88?img=33"
+                    alt="Portrait of Daniel Ritter"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                  <span class="text-[13px] leading-ui text-content-main">
+                    Daniel Ritter
+                    <span class="block text-content-secondary"
+                      >M3 Touring · Attendee</span
+                    >
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- ===== Slide 4 ===== -->
+            <li class="swiper-slide h-auto">
+              <figure
+                class="flex h-full flex-col rounded-md border border-line bg-surface-light p-6 shadow-xs"
+              >
+                <div
+                  class="mb-4 flex gap-1 text-accent-brass"
+                  role="img"
+                  aria-label="Rated 5 out of 5"
+                >
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                </div>
+                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                  “As a photographer: the light, the cars and the people —
+                  it’s the friendliest event of the season to shoot.”
+                </blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img
+                    class="h-11 w-11 shrink-0 rounded-full object-cover"
+                    src="https://i.pravatar.cc/88?img=44"
+                    alt="Portrait of Sofia Fischer"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                  <span class="text-[13px] leading-ui text-content-main">
+                    Sofia Fischer
+                    <span class="block text-content-secondary"
+                      >Guest · Photographer</span
+                    >
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- ===== Slide 5 ===== -->
+            <li class="swiper-slide h-auto">
+              <figure
+                class="flex h-full flex-col rounded-md border border-line bg-surface-light p-6 shadow-xs"
+              >
+                <div
+                  class="mb-4 flex gap-1 text-accent-brass"
+                  role="img"
+                  aria-label="Rated 5 out of 5"
+                >
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                </div>
+                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                  “The review process felt honest. They asked about the build,
+                  not about my follower count. That says everything.”
+                </blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img
+                    class="h-11 w-11 shrink-0 rounded-full object-cover"
+                    src="https://i.pravatar.cc/88?img=59"
+                    alt="Portrait of Tomas Berg"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                  <span class="text-[13px] leading-ui text-content-main">
+                    Tomas Berg
+                    <span class="block text-content-secondary"
+                      >240Z restoration · Exhibitor</span
+                    >
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- ===== Slide 6 ===== -->
+            <li class="swiper-slide h-auto">
+              <figure
+                class="flex h-full flex-col rounded-md border border-line bg-surface-light p-6 shadow-xs"
+              >
+                <div
+                  class="mb-4 flex gap-1 text-accent-brass"
+                  role="img"
+                  aria-label="Rated 5 out of 5"
+                >
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                  <svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#icon-star" /></svg>
+                </div>
+                <blockquote class="flex-1 text-[15px] leading-body text-content-main">
+                  “Well organised, relaxed pace, great coffee. My kids didn’t
+                  want to leave — neither did I, honestly.”
+                </blockquote>
+                <figcaption class="mt-6 flex items-center gap-3">
+                  <img
+                    class="h-11 w-11 shrink-0 rounded-full object-cover"
+                    src="https://i.pravatar.cc/88?img=32"
+                    alt="Portrait of Julia Weber"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                  />
+                  <span class="text-[13px] leading-ui text-content-main">
+                    Julia Weber
+                    <span class="block text-content-secondary"
+                      >Golf GTI · Attendee</span
+                    >
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+
+          <!-- ========= Navigation & pagination ========= -->
+          <div class="mt-8 flex items-center justify-between">
+            <div class="reviews-pagination swiper-pagination !static !mt-0"></div>
+            <div class="flex items-center gap-3">
+              <button
+                type="button"
+                class="reviews-button-prev swiper-button-prev"
+                aria-label="Previous review"
+              ></button>
+              <button
+                type="button"
+                class="reviews-button-next swiper-button-next"
+                aria-label="Next review"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ===================== Footer ===================== -->
@@ -365,6 +667,39 @@
         toggle.addEventListener("click", function () {
           var open = header.classList.toggle("is-open");
           toggle.setAttribute("aria-expanded", String(open));
+        });
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      // Reviews slider (Swiper 11)
+      (function () {
+        if (typeof Swiper === "undefined") return;
+        new Swiper(".reviews-swiper", {
+          loop: true,
+          speed: 600,
+          watchSlidesProgress: true,
+          a11y: { enabled: true },
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          breakpoints: {
+            0: { slidesPerView: 1, spaceBetween: 16 },
+            640: { slidesPerView: 2, spaceBetween: 24 },
+            1024: { slidesPerView: 3, spaceBetween: 32 },
+          },
+          navigation: {
+            nextEl: ".reviews-button-next",
+            prevEl: ".reviews-button-prev",
+          },
+          pagination: {
+            el: ".reviews-pagination",
+            clickable: true,
+          },
         });
       })();
     </script>
