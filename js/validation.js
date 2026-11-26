@@ -58,14 +58,14 @@
   const INTL_MAX_DIGITS = 15; // E.164 maximum
 
   // Tailwind classes used for the visual states
-  const ERROR_BORDER = 'border-red-500';
+  const ERROR_BORDER = 'border-red-800';
   const SUCCESS_BORDER = 'border-green-500';
 
   // Matches a border *colour* class (border-line, border-accent-brass …) but not
   // width / style / side classes (border, border-t, border-2, border-dashed …)
   // and not our own state classes.
   const BASE_BORDER_COLOR_CLASS =
-    /^border-(?!red-500$|green-500$)(?!(?:[trblxyse]|\d+|dashed|solid|dotted|double|hidden|none|collapse|separate|spacing)(?:-|$))/;
+    /^border-(?!red-800$|green-500$)(?!(?:[trblxyse]|\d+|dashed|solid|dotted|double|hidden|none|collapse|separate|spacing)(?:-|$))/;
 
   // Attribute marking a field the user has not interacted with yet
   const UNTOUCHED_ATTR = 'data-untouched';
@@ -421,7 +421,7 @@
 
   /** Creates an error <p> in a sensible place for the field type. */
   function createErrorElement(field, errorId) {
-    const el = createElement('p', 'hidden text-xs leading-normal text-red-500', {
+    const el = createElement('p', 'hidden text-xs leading-normal text-red-800', {
       id: errorId,
       'aria-live': 'polite',
     });
@@ -471,7 +471,7 @@
       // Markup-provided <p>: it reserves space, so toggle visibility instead
       el.classList.toggle('invisible', !show);
       el.classList.toggle('visible', show);
-      el.classList.toggle('text-red-500', show); // markup has a typo'd colour class
+      el.classList.toggle('text-red-800', show); // markup has a typo'd colour class
     }
   }
 
@@ -552,7 +552,7 @@
    * Suppress native :invalid styling until the field is touched
    *
    * Only needed when the markup styles the browser's :invalid state
-   * (classes like "invalid:border-red-500" / "peer-invalid:visible"), which
+   * (classes like "invalid:border-red-800" / "peer-invalid:visible"), which
    * is true for empty required fields right after page load. Forms that use
    * :user-invalid instead already wait for user interaction and don't need it.
    * The neutral colours are measured from a hidden clone of the field without
