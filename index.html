@@ -17,16 +17,16 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
-
     <link rel="stylesheet" href="css/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"
+    />
 
     <style>
       .swiper-pagination-bullet-active {
@@ -138,7 +138,11 @@
           </div>
         </div>
         <div class="min-w-0">
-          <img src="assets/images/hero.jpg" alt="Hero image" loading="lazy" />
+          <img
+            src="assets/images/hero.webp"
+            alt="Hero image"
+            fetchpriority="high"
+          />
         </div>
       </section>
 
@@ -173,7 +177,7 @@
               >
                 <img
                   class="absolute inset-0 h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
-                  src="assets/images/hero.jpg"
+                  src="assets/images/hero.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -209,7 +213,7 @@
               >
                 <img
                   class="absolute inset-0 h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
-                  src="assets/images/hero.jpg"
+                  src="assets/images/hero.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -269,7 +273,7 @@
         >
           <li class="group min-w-0">
             <a
-              href="assets/images/hero.jpg"
+              href="assets/images/hero.webp"
               data-fancybox="archive-gallery"
               data-caption="Golden hour arrivals — engines cooling, conversations starting."
               class="relative block overflow-hidden rounded-sm focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
@@ -277,7 +281,7 @@
             >
               <img
                 class="h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
-                src="assets/images/hero.jpg"
+                src="assets/images/hero.webp"
                 alt="Golden hour arrivals at a STRATA gathering"
                 loading="lazy"
               />
@@ -285,7 +289,7 @@
           </li>
           <li class="group min-w-0">
             <a
-              href="assets/images/hero.jpg"
+              href="assets/images/hero.webp"
               data-fancybox="archive-gallery"
               data-caption="Every badge tells a story — owners stand beside their builds all weekend."
               class="relative block overflow-hidden rounded-sm focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
@@ -293,7 +297,7 @@
             >
               <img
                 class="h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
-                src="assets/images/hero.jpg"
+                src="assets/images/hero.webp"
                 alt="Owner standing beside a restored car"
                 loading="lazy"
               />
@@ -301,7 +305,7 @@
           </li>
           <li class="group min-w-0">
             <a
-              href="assets/images/hero.jpg"
+              href="assets/images/hero.webp"
               data-fancybox="archive-gallery"
               data-caption="The last lap of the day — tails and taillights heading home."
               class="relative block overflow-hidden rounded-sm focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary-navy"
@@ -309,7 +313,7 @@
             >
               <img
                 class="h-full w-full object-cover transition-transform duration-slow ease-standard group-hover:scale-[1.04]"
-                src="assets/images/hero.jpg"
+                src="assets/images/hero.webp"
                 alt="Cars leaving the event ground at dusk"
                 loading="lazy"
               />
@@ -333,7 +337,7 @@
         <div class="min-w-0">
           <img
             class="h-full w-full object-cover"
-            src="assets/images/hero.jpg"
+            src="assets/images/hero.webp"
             alt=""
             loading="lazy"
           />
@@ -359,17 +363,17 @@
           </p>
           <ol class="mb-7 flex flex-col gap-2 [counter-reset:step]">
             <li
-              class="text-sm leading-normal text-accent-brass [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
+              class="text-sm leading-normal text-accent-brass-hover [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
             >
               Choose your event
             </li>
             <li
-              class="text-sm leading-normal text-accent-brass [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
+              class="text-sm leading-normal text-accent-brass-hover [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
             >
               Share your vehicle and photos
             </li>
             <li
-              class="text-sm leading-normal text-accent-brass [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
+              class="text-sm leading-normal text-accent-brass-hover [counter-increment:step] before:me-3 before:content-[counter(step,decimal-leading-zero)]"
             >
               Hear back from the curation team
             </li>
@@ -542,7 +546,7 @@
                   <div class="mt-1.5 flex items-start justify-between gap-4">
                     <p
                       id="precheck-description-hint"
-                      class="text-xs leading-ui text-content-disabled"
+                      class="text-xs leading-ui text-content-secondary"
                     >
                       Specific details beat superlatives.
                     </p>
@@ -969,7 +973,7 @@
                   >
                   Add evidence photos
                   <span
-                    class="font-normal normal-case tracking-normal text-content-disabled"
+                    class="font-normal normal-case tracking-normal text-content-inverse-disabled"
                     >(optional, can raise your score)</span
                   >
                 </summary>
@@ -2113,8 +2117,8 @@
         });
       })();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       const fullStrings = [
@@ -2175,7 +2179,7 @@
         });
       })();
     </script>
-    <script src="js/widget.js"></script>
+    <script src="js/widget.js" defer></script>
     <script>
       // Reviews slider (Swiper 11)
       (function () {
